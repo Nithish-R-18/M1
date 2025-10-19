@@ -10,25 +10,29 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() {
+    char a,b,c;
+    printf("Enter 1st character: ");
+    scanf(" %c",&a);
+    printf("Enter 2nd character: ");
+    scanf(" %c",&b);
+    printf("Enter 3rd character: ");
+    scanf(" %c",&c);
+    printf("characters in reverse order : %c %c %c",c,b,a);
+}
+
+```
 
 ## OUTPUT:
+```
+Enter 1st character: A
+Enter 2nd character: B
+Enter 3rd character: C
+characters in reverse order : C B A
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 ## RESULT:
 Thus the program to read 3 characters one by one and print the characters in a reverse order has been executed successfully.
 
@@ -46,18 +50,30 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
+```
+#include<stdio.h>
+int main()
+{
+    int a;
+    printf("Enter a number to check : ");
+    scanf("%d",&a);
+    if(a>0)
+    printf("It's a positive number.");
+    else
+    printf("It's not a positive number.");
+}
 
+```
 # OUTPUT:
+```
+Enter a number to check : 10
+It's a positive number.
 
 
+Enter a number to check : -10
+It's not a positive number.
 
-
-
-
-
-
-
-
+```
 
 # RESULT:
 Thus the program to read A values and check whether A is positive number or not has been executed successfully.
@@ -80,16 +96,38 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+```
+#include<stdio.h>
+int main()
+{
+    int n1,d1;
+    float v1=0;
+    printf("Enter numerator for first fractional number : ");
+    scanf("%d",&n1);
+    printf("Enter denominator for first fractional number : ");
+    scanf("%d",&d1);
+    v1=n1/d1;
 
+    int n2,d2;
+    float v2=0;
+    printf("Enter numerator for second fractional number : ");
+    scanf("%d",&n2);
+    printf("Enter denominator for second fractional number : ");
+    scanf("%d",&d2);
+    v2=n2/v2;
+    float t=v1<v2? printf("%.2f is minimum.",v1): printf("%.2f is minimum.",v2);
+}
+
+```
 ## OUTPUT:
+```
+Enter numerator for first fractional number : 12
+Enter denominator for first fractional number : 6
+Enter numerator for second fractional number : 24
+Enter denominator for second fractional number : 2
+2.00 is minimum.
 
-
-
-
-
-
-
-
+```
 
 ## RESULT:
 Thus the program to find minimum between two fraction numbers using conditional operator or ternary operator has been executed successfully.
@@ -111,18 +149,32 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
+```
+#include<stdio.h>
+int main()
+{
+    int num;
+    printf("Enter a number : ");
+    scanf("%d",&num);
+    if(num==1)
+    printf("The given number is equal to 1");
+    else
+    printf("The given number is not equal to 1");
+}
+
+```
 
 ## OUTPUT:
 
+```
+Enter a number : 1
+The given number is equal to 1
 
 
+Enter a number : 2
+The given number is not equal to 1
 
-
-
-
-
-
-	
+```
 
 ## RESULT:
 Thus the program to check whether the input value is equal to 1 using simple if statement has been executed successfully
@@ -147,9 +199,46 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include<stdio.h>
+int main()
+{
+    int m1,m2,m3;
+    float tot,per;
+    printf("enter mark of subject 1 : ");
+    scanf("%d",&m1);
+    printf("enter mark of subject 2 : ");
+    scanf("%d",&m2);
+    printf("enter mark of subject 3 : ");
+    scanf("%d",&m3);
+    tot=m1+m2+m3;
+    per=tot/3;
+    printf("Total mark is %.2f\nPercentage is %.2f \n",tot,per);
+    if(m1>=40 && m2>=40 && m3>=40)
+    {
+        if(per>=60)
+        printf("Division = First");
+        else if(per>=48)
+        printf("Division = Second");
+        else if(per>=36)
+        printf("Division = Pass");
+        else
+        printf("Division = Fail");
+    }
+}
+
+```
 
 ## OUTPUT:
+```
+enter mark of subject 1 : 70
+enter mark of subject 2 : 68
+enter mark of subject 3 : 89
+Total mark is 227.00
+Percentage is 75.67 
+Division = First
 
+```
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
 
